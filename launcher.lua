@@ -34,12 +34,8 @@ elseif game.PlaceId == 5203883770 then
 	getgenv().Msg = "ياحلو استمتع"
 	getgenv().UpdateText = [[
 	HdAdmin = {
-		[Gui] = {
-			1 - جديد شكل
-		}
-
-		[Premium] = {
-			1 - بريموم اضافة تم
+		[Target] = {
+			1 - الاستهداف مشكلة حل تم
 		}
 	}	
 	]]
