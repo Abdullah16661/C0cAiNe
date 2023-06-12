@@ -1,3 +1,4 @@
+--مايهم
 getgenv().GuiName = "C0cAiNe.Lua"
 if game.PlaceId == 10659321502 then
 	getgenv().UpdateName = "v1.1 رقم تحديث"
