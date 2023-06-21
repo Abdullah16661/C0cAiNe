@@ -16,7 +16,16 @@ if game.PlaceId == 10659321502 then
 		}
 	}
     ]]
-
+elseif game.PlaceId == 9748064935 then
+	getgenv().UpdateName = "v0.1"
+	getgenv().MapName = "ماب البيوت🏘️"
+	getgenv().MapImage = "http://www.roblox.com/asset/?id=13817458534"
+	getgenv().Msg = "⚠️باند لقمت اذا دخل مالي انا⚠️"
+	getgenv().UpdateText = [[
+	Arabic Brookhaven = {
+		1 - Nothing new :3
+	}	
+	]]
 elseif game.PlaceId == 662417684 then
 	getgenv().UpdateName = "v0.1"
 	getgenv().MapName = "LUCKY BLOCKS Battlegrounds"
@@ -347,6 +356,8 @@ elseif game.PlaceId == 662417684 then
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/LuckyBlocks.lua'))()
 elseif game.PlaceId == 5203883770 then
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/HdAdmin.lua'))()
+elseif game.PlaceId == 9748064935 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Arabic%20Brookhaven.lua'))()
 end
 end)
 
