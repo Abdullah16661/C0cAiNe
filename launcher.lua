@@ -16,6 +16,16 @@ if game.PlaceId == 10659321502 then
 		}
 	}
     ]]
+elseif game.PlaceId == 9848789324 then
+	getgenv().UpdateName = "v0.1 رقم تحديث"
+	getgenv().MapName = "Ragdoll Engine"
+	getgenv().MapImage = "http://www.roblox.com/asset/?id=13874938186"
+	getgenv().Msg = "⚠️باند لقمت اذا دخل مالي انا⚠️"
+	getgenv().UpdateText = [[
+	RagdollEngine = {
+	   1 - جديد شي مافيه
+        }
+    ]]
 elseif game.PlaceId == 9748064935 then
 	getgenv().UpdateName = "v0.1"
 	getgenv().MapName = "ماب البيوت🏘️"
@@ -351,13 +361,15 @@ Load.MouseButton1Down:connect(function()
 wait(0.7)
 game.CoreGui:FindFirstChild("Launcher"):Destroy()
 if game.PlaceId == 10659321502 then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Sword%20War%20Steal%20Time'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Sword%20War%20Steal%20Time'))()
 elseif game.PlaceId == 662417684 then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/LuckyBlocks.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/LuckyBlocks.lua'))()
 elseif game.PlaceId == 5203883770 then
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/HdAdmin.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/HdAdmin.lua'))()
 elseif game.PlaceId == 9748064935 then
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Arabic%20Brookhaven.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Arabic%20Brookhaven.lua'))()
+elseif game.PlaceId == 9848789324 then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/RagdollEngine.lua'))()
 end
 end)
 
