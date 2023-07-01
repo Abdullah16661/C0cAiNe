@@ -32,7 +32,7 @@ RagdollEngine = {
         1 - جديدة كومندات
         cmds = {
             1 - c!meme .
-            2 c!milk .
+            2 - c!milk .
         }
     }
 }
