@@ -22,19 +22,20 @@ elseif game.PlaceId == 9848789324 then
 	getgenv().MapImage = "http://www.roblox.com/asset/?id=13874938186"
 	getgenv().Msg = "⚠️باند لقمت اذا دخل مالي انا⚠️"
 	getgenv().UpdateText = [[
-	RagdollEngine = {
-            [Ragdoll] = {
-                1 - البانق مضاد مشكلة حل تم
-            }
+RagdollEngine = {
+    [Ragdoll] = {
+        1 - الكل دف اضافة تم
+        2 - توش فلينق اضافة تم
+    }
 
-            [Player] = {
-                1 - اختفاء اضافة تم
-            }
-    
-            [Target] = {
-                1 - القديم لمكانك مايرجعك دف سبام مشكلة حل تم
-            }
+    [Premium] = {
+        1 - جديدة كومندات
+        cmds = {
+            1 - c!meme .
+            2 c!milk .
         }
+    }
+}
 	]]
 elseif game.PlaceId == 9748064935 then
 	getgenv().UpdateName = "v0.1"
