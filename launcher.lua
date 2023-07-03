@@ -24,19 +24,21 @@ elseif game.PlaceId == 9848789324 then
 	getgenv().UpdateText = [[
 RagdollEngine = {
     [Ragdoll] = {
-        1 - الكل دف اضافة تم
-        2 - توش فلينق اضافة تم
+        1 - Fling All
+        2 - Push All
     }
 
-    [Premium] = {
-        1 - جديدة كومندات
-        cmds = {
-            1 - c!meme .
-            2 - c!milk .
-        }
+    [Target] = {
+        1 - Fling Targe
+        2 - Benx
+    }
+
+    New Tabs = {
+        1 - Animation Changer
+        2 - Avatar Changer
     }
 }
-	]]
+]]
 elseif game.PlaceId == 9748064935 then
 	getgenv().UpdateName = "v0.1"
 	getgenv().MapName = "ماب البيوت🏘️"
