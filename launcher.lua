@@ -29,7 +29,7 @@ RagdollEngine = {
     }
 
     [Target] = {
-        1 - Fling Targe
+        1 - Fling Target
         2 - Benx
     }
 
