@@ -1,10 +1,7 @@
---مايهم
-getgenv().GuiName = "C0cAiNe.Lua"
 if game.PlaceId == 10659321502 then
 	getgenv().UpdateName = "v1.1 رقم تحديث"
 	getgenv().MapName = "الاخرين من الوقت اسرق السيوف حرب"
 	getgenv().MapImage = "http://www.roblox.com/asset/?id=13414705530"
-	getgenv().Msg = "⚠️باند لقمت اذا دخل مالي انا⚠️"
 	getgenv().UpdateText = [[
 	Sowrd War = {
 		[Gui] = {
@@ -20,7 +17,6 @@ elseif game.PlaceId == 9848789324 then
 	getgenv().UpdateName = "v0.1 رقم تحديث"
 	getgenv().MapName = "Ragdoll Engine"
 	getgenv().MapImage = "http://www.roblox.com/asset/?id=13874938186"
-	getgenv().Msg = "⚠️باند لقمت اذا دخل مالي انا⚠️"
 	getgenv().UpdateText = [[
 RagdollEngine = {
     [Ragdoll] = {
@@ -43,7 +39,6 @@ elseif game.PlaceId == 9748064935 then
 	getgenv().UpdateName = "v0.1"
 	getgenv().MapName = "ماب البيوت🏘️"
 	getgenv().MapImage = "http://www.roblox.com/asset/?id=13817458534"
-	getgenv().Msg = "⚠️باند لقمت اذا دخل مالي انا⚠️"
 	getgenv().UpdateText = [[
 	Arabic Brookhaven = {
 		1 - Nothing new :3
@@ -53,7 +48,6 @@ elseif game.PlaceId == 662417684 then
 	getgenv().UpdateName = "v0.1"
 	getgenv().MapName = "LUCKY BLOCKS Battlegrounds"
 	getgenv().MapImage = "http://www.roblox.com/asset/?id=13564244676"
-	getgenv().Msg = "⚠️I am not responsible if ur banned⚠️"
 	getgenv().UpdateText = [[
 	LuckyBlock = {
 		1 - Nothing new :3
@@ -64,7 +58,6 @@ elseif game.PlaceId == 5203883770 then
 	getgenv().UpdateName = "v0.1"
 	getgenv().MapName = "مجاني بي اي في اولاد و بنات"
 	getgenv().MapImage = "http://www.roblox.com/asset/?id=13628104429"
-	getgenv().Msg = "ياحلو استمتع"
 	getgenv().UpdateText = [[
 	HdAdmin = {
 		[Target] = {
@@ -76,258 +69,163 @@ else
 	game.Players.LocalPlayer:Kick("مدعوم غير الماب")
 end
 
-if game.CoreGui:FindFirstChild("Launcher") then
-    game.CoreGui:FindFirstChild("Launcher"):Destroy()
+if game.CoreGui:FindFirstChild("lan") then
+    game.CoreGui:FindFirstChild("lan"):Destroy()
 end
-local Launcher = Instance.new("ScreenGui")
-local Home = Instance.new("Frame")
-local Line = Instance.new("Frame")
-local GuiName = Instance.new("TextLabel")
-local LineCorner = Instance.new("UICorner")
-local UpdateFrame = Instance.new("Frame")
-local UpdateName = Instance.new("TextLabel")
-local UpdateText = Instance.new("TextLabel")
-local UpdateFrameCorner = Instance.new("UICorner")
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local Frame = Instance.new("Frame")
+local unload = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local load = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local gameimage = Instance.new("ImageLabel")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
 local ScrollingFrame = Instance.new("ScrollingFrame")
-local MapInfo = Instance.new("Frame")
-local MapImage = Instance.new("ImageLabel")
-local MapImageCorner = Instance.new("UICorner")
-local MapName = Instance.new("TextLabel")
-local MapInfoCorner = Instance.new("UICorner")
-local StartScript = Instance.new("Frame")
-local Msg = Instance.new("TextLabel")
-local Load = Instance.new("TextButton")
-local LoadCorner = Instance.new("UICorner")
-local UnLoad = Instance.new("TextButton")
-local UnLoadCorner = Instance.new("UICorner")
-local StartScriptCorner = Instance.new("UICorner")
-local Icon = Instance.new("ImageLabel")
-local HomeCorner = Instance.new("UICorner")
-local DropShadowHolder = Instance.new("Frame")
-local DropShadow = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Label = Instance.new("TextLabel")
+local Image = Instance.new("ImageLabel")
 
 --Properties:
 
-Launcher.Name = "Launcher"
-Launcher.Parent = game.CoreGui
-Launcher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Name = "lan"
 
-Home.Name = "Home"
-Home.Parent = Launcher
-Home.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
-Home.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Home.Position = UDim2.new(0.325684011, 0, 0.215025917, 0)
-Home.Size = UDim2.new(0, 395, 0, 419)
-
-Line.Name = "Line"
-Line.Parent = Home
-Line.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
-Line.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Line.Size = UDim2.new(0, 395, 0, 24)
-
-GuiName.Name = "GuiName"
-GuiName.Parent = Line
-GuiName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-GuiName.BackgroundTransparency = 2.000
-GuiName.BorderSizePixel = 0
-GuiName.Position = UDim2.new(0.0177215189, 0, 0.0416666679, 0)
-GuiName.Size = UDim2.new(0, 380, 0, 22)
-GuiName.Font = Enum.Font.FredokaOne
-GuiName.Text = getgenv().GuiName
-coroutine.wrap(function()
-    while wait() do
-        GuiName.TextColor3 = Color3.fromHSV(tick()%5/5,1,1)
-    end
-end)()
-GuiName.TextSize = 15.000
-GuiName.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-GuiName.TextStrokeTransparency = 0.000
-GuiName.TextXAlignment = Enum.TextXAlignment.Left
-
-LineCorner.Name = "LineCorner"
-LineCorner.Parent = Line
-
-UpdateFrame.Name = "UpdateFrame"
-UpdateFrame.Parent = Home
-UpdateFrame.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-UpdateFrame.BorderColor3 = Color3.fromRGB(255, 255, 255)
-UpdateFrame.Position = UDim2.new(0.0278481022, 0, 0.0883054882, 0)
-UpdateFrame.Size = UDim2.new(0, 375, 0, 200)
-
-ScrollingFrame.Parent = UpdateFrame
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BackgroundTransparency = 2
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.37675184, 0, 0.366580307, 0)
+Main.Size = UDim2.new(0, 299, 0, 205)
+ImageLabel.Parent = Main
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 2.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.331103683, 0, 0.253658533, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://11963368259"
+ImageLabel.ImageTransparency = 1.000
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Frame.BackgroundTransparency = 2.000
+Frame.BorderColor3 = Color3.fromRGB(18, 18, 18)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 105, 0, 205)
+unload.Name = "unload"
+unload.Parent = Frame
+unload.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+unload.BackgroundTransparency = 2.000
+unload.BorderColor3 = Color3.fromRGB(0, 0, 0)
+unload.BorderSizePixel = 0
+unload.Position = UDim2.new(0.142857149, 0, 0.814634144, 0)
+unload.Size = UDim2.new(0, 75, 0, 27)
+unload.AutoButtonColor = false
+unload.Font = Enum.Font.FredokaOne
+unload.Text = "Unload"
+unload.TextColor3 = Color3.fromRGB(255, 255, 255)
+unload.TextSize = 14.000
+unload.TextTransparency = 2.000
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = unload
+load.Name = "load"
+load.Parent = Frame
+load.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+load.BackgroundTransparency = 2.000
+load.BorderColor3 = Color3.fromRGB(0, 0, 0)
+load.BorderSizePixel = 0
+load.Position = UDim2.new(0.142857149, 0, 0.643902421, 0)
+load.Size = UDim2.new(0, 75, 0, 27)
+load.AutoButtonColor = false
+load.Font = Enum.Font.FredokaOne
+load.Text = "Load"
+load.TextColor3 = Color3.fromRGB(255, 255, 255)
+load.TextSize = 14.000
+load.TextTransparency = 2.000
+UICorner_2.CornerRadius = UDim.new(0, 5)
+UICorner_2.Parent = load
+gameimage.Name = "gameimage"
+gameimage.Parent = Frame
+gameimage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gameimage.BackgroundTransparency = 2.000
+gameimage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gameimage.BorderSizePixel = 0
+gameimage.Position = UDim2.new(0.152380958, 0, 0.234146342, 0)
+gameimage.Size = UDim2.new(0, 73, 0, 73)
+gameimage.Image = getgenv().MapImage
+gameimage.ImageTransparency = 1.000
+UICorner_3.Parent = gameimage
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 2.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.095238097, 0, 0.0341463424, 0)
+TextLabel.Size = UDim2.new(0, 85, 0, 34)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = getgenv().MapName
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextTransparency = 2.000
+TextLabel.TextWrapped = true
+ScrollingFrame.Parent = Main
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame.BackgroundTransparency = 2.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Size = UDim2.new(0, 372, 0, 199)
+ScrollingFrame.Position = UDim2.new(0.371237457, 0, 0.200000003, 0)
+ScrollingFrame.Size = UDim2.new(0, 188, 0, 153)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.3, 0)
+ScrollingFrame.ScrollBarImageTransparency = 2
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 2.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.00531914877, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 173, 0, 159)
+TextLabel_2.Font = Enum.Font.RobotoCondensed
+TextLabel_2.Text = getgenv().UpdateText
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextTransparency = 2.000
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+Label.Name = "Label"
+Label.Parent = Main
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BackgroundTransparency = 2.000
+Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label.BorderSizePixel = 0
+Label.Position = UDim2.new(0.458193988, 0, 0, 0)
+Label.Size = UDim2.new(0, 162, 0, 35)
+Label.Font = Enum.Font.FredokaOne
+Label.Text = "C0cAiNe.Lua | "..getgenv().UpdateName
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextSize = 14.000
+Label.TextTransparency = 2.000
+Label.TextXAlignment = Enum.TextXAlignment.Left
+Image.Name = "Image"
+Image.Parent = Main
+Image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image.BackgroundTransparency = 2.000
+Image.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Image.BorderSizePixel = 0
+Image.Position = UDim2.new(0.351170599, 0, 0.0195121951, 0)
+Image.Size = UDim2.new(0, 26, 0, 26)
+Image.Image = "rbxassetid://11963368259"
+Image.ImageTransparency = 1.000
 
-UpdateName.Name = "UpdateName"
-UpdateName.Parent = ScrollingFrame
-UpdateName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UpdateName.BackgroundTransparency = 2.000
-UpdateName.Position = UDim2.new(0.0240000002, 0, 0.0450000018, 0)
-UpdateName.Size = UDim2.new(0, 354, 0, 19)
-UpdateName.Font = Enum.Font.FredokaOne
-UpdateName.Text = getgenv().UpdateName
-UpdateName.TextColor3 = Color3.fromRGB(255, 0, 0)
-UpdateName.TextSize = 18.000
-UpdateName.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-UpdateName.TextStrokeTransparency = 0.000
-
-UpdateText.Name = "UpdateText"
-UpdateText.Parent = ScrollingFrame
-UpdateText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UpdateText.BackgroundTransparency = 2.000
-UpdateText.Position = UDim2.new(0.0266667847, 0, 0.117732219, 0)
-UpdateText.Size = UDim2.new(0, 354, 0, 299)
-UpdateText.Font = Enum.Font.FredokaOne
-UpdateText.Text = getgenv().UpdateText
-UpdateText.TextColor3 = Color3.fromRGB(255, 255, 255)
-UpdateText.TextSize = 15.000
-UpdateText.TextStrokeTransparency = 0.000
-UpdateText.TextWrapped = true
-UpdateText.TextXAlignment = Enum.TextXAlignment.Left
-UpdateText.TextYAlignment = Enum.TextYAlignment.Top
-
-UpdateFrameCorner.Name = "UpdateFrameCorner"
-UpdateFrameCorner.Parent = UpdateFrame
-
-MapInfo.Name = "MapInfo"
-MapInfo.Parent = Home
-MapInfo.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-MapInfo.BorderColor3 = Color3.fromRGB(255, 255, 255)
-MapInfo.Position = UDim2.new(0.0278481022, 0, 0.596658707, 0)
-MapInfo.Size = UDim2.new(0, 179, 0, 157)
-
-MapImage.Name = "MapImage"
-MapImage.Parent = MapInfo
-MapImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MapImage.Position = UDim2.new(0.21787709, 0, 0.286624193, 0)
-MapImage.Size = UDim2.new(0, 100, 0, 100)
-MapImage.Image = getgenv().MapImage
-
-MapImageCorner.Name = "MapImageCorner"
-MapImageCorner.Parent = MapImage
-
-MapName.Name = "MapName"
-MapName.Parent = MapInfo
-MapName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MapName.BackgroundTransparency = 2.000
-MapName.Position = UDim2.new(0.0223463681, 0, 0.0445859879, 0)
-MapName.Size = UDim2.new(0, 170, 0, 27)
-MapName.Font = Enum.Font.FredokaOne
-MapName.Text = getgenv().MapName
-MapName.TextColor3 = Color3.fromRGB(255, 255, 255)
-MapName.TextScaled = true
-MapName.TextSize = 14.000
-MapName.TextStrokeTransparency = 0.000
-MapName.TextWrapped = true
-
-MapInfoCorner.Name = "MapInfoCorner"
-MapInfoCorner.Parent = MapInfo
-
-StartScript.Name = "StartScript"
-StartScript.Parent = Home
-StartScript.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-StartScript.BorderColor3 = Color3.fromRGB(255, 255, 255)
-StartScript.Position = UDim2.new(0.524050593, 0, 0.596658707, 0)
-StartScript.Size = UDim2.new(0, 179, 0, 157)
-
-Msg.Name = "Msg"
-Msg.Parent = StartScript
-Msg.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-Msg.BorderColor3 = Color3.fromRGB(126, 126, 126)
-Msg.BorderSizePixel = 0
-Msg.Position = UDim2.new(0.0391061455, 0, 0.0445859879, 0)
-Msg.Size = UDim2.new(0, 164, 0, 83)
-Msg.Font = Enum.Font.FredokaOne
-Msg.Text = getgenv().Msg
-if game.PlaceId == 662417684 then
-Msg.TextScaled = true
-end
-Msg.TextColor3 = Color3.fromRGB(255, 255, 255)
-Msg.TextSize = 14.000
-Msg.TextStrokeTransparency = 0.000
-Msg.TextYAlignment = Enum.TextYAlignment.Top
-
-Load.Name = "Load"
-Load.Parent = StartScript
-Load.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-Load.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Load.Position = UDim2.new(0.0558659136, 0, 0.662420392, 0)
-Load.Size = UDim2.new(0, 158, 0, 19)
-Load.Font = Enum.Font.FredokaOne
-if game.PlaceId == 10659321502 then
-Load.Text = "السكربت تشغيل"
-else
-Load.Text = "Load"
-end
-Load.TextColor3 = Color3.fromRGB(0, 0, 0)
-Load.TextSize = 13.000
-Load.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-Load.TextStrokeTransparency = 0.000
-
-LoadCorner.Name = "LoadCorner"
-LoadCorner.Parent = Load
-
-UnLoad.Name = "UnLoad"
-UnLoad.Parent = StartScript
-UnLoad.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-UnLoad.BorderColor3 = Color3.fromRGB(255, 255, 255)
-UnLoad.Position = UDim2.new(0.0558659136, 0, 0.840764344, 0)
-UnLoad.Size = UDim2.new(0, 158, 0, 19)
-UnLoad.Font = Enum.Font.FredokaOne
-if game.PlaceId == 10659321502 then
-UnLoad.Text = "السكربت تشغيل عدم"
-else
-UnLoad.Text = "UnLoad"
-end
-UnLoad.TextColor3 = Color3.fromRGB(0, 0, 0)
-UnLoad.TextSize = 13.000
-UnLoad.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
-UnLoad.TextStrokeTransparency = 0.000
-
-UnLoadCorner.Name = "UnLoadCorner"
-UnLoadCorner.Parent = UnLoad
-
-StartScriptCorner.Name = "StartScriptCorner"
-StartScriptCorner.Parent = StartScript
-
-Icon.Name = "Icon"
-Icon.Parent = Home
-Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Icon.BackgroundTransparency = 2.000
-Icon.Position = UDim2.new(0, 0, 3.64171591e-08, 0)
-Icon.Size = UDim2.new(0, 395, 0, 419)
-Icon.Image = "http://www.roblox.com/asset/?id=1624072036"
-Icon.ImageTransparency = 0.920
-
-HomeCorner.Name = "HomeCorner"
-HomeCorner.Parent = Home
-
-DropShadowHolder.Name = "DropShadowHolder"
-DropShadowHolder.Parent = Home
-DropShadowHolder.BackgroundTransparency = 1.000
-DropShadowHolder.BorderSizePixel = 0
-DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
-DropShadowHolder.ZIndex = 0
-
-DropShadow.Name = "DropShadow"
-DropShadow.Parent = DropShadowHolder
-DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-DropShadow.BackgroundTransparency = 1.000
-DropShadow.BorderSizePixel = 0
-DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow.Size = UDim2.new(1, 47, 1, 47)
-DropShadow.ZIndex = 0
-DropShadow.Image = "rbxassetid://6015897843"
-DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-DropShadow.ImageTransparency = 0.500
-DropShadow.ScaleType = Enum.ScaleType.Slice
-DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
-
-local function LOGGHUI_fake_script() 
-	local script = Instance.new('LocalScript', Home)
+local function MakeDraggable() 
+	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService("UserInputService")
 	function dragify(Frame)
@@ -367,26 +265,124 @@ local function LOGGHUI_fake_script()
 
 	dragify(script.Parent)
 end
-coroutine.wrap(LOGGHUI_fake_script)()
+
+MakeDraggable()
+
+game:GetService("TweenService"):Create(Main,TweenInfo.new(0.25),{BackgroundTransparency = 0}):Play()
+wait(2)
+game:GetService("TweenService"):Create(ImageLabel,TweenInfo.new(0.25),{ImageTransparency = 0}):Play()
+wait(2)
+game:GetService("TweenService"):Create(ImageLabel,TweenInfo.new(0.25),{ImageTransparency = 2}):Play()
+wait(1)
+game:GetService("TweenService"):Create(Frame,TweenInfo.new(0.25),{BackgroundTransparency = 0}):Play()
+wait(0.2)
+game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{TextTransparency = 0}):Play()
+game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{BackgroundTransparency = 0}):Play()
+wait(0.2)
+game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{TextTransparency = 0}):Play()
+game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{BackgroundTransparency = 0}):Play()
+wait(0.2)
+game:GetService("TweenService"):Create(gameimage,TweenInfo.new(0.25),{ImageTransparency = 0}):Play()
+wait(0.2)
+game:GetService("TweenService"):Create(ScrollingFrame,TweenInfo.new(0.25),{ScrollBarImageTransparency = 0}):Play()
+wait(0.2)
+game:GetService("TweenService"):Create(TextLabel,TweenInfo.new(0.25),{TextTransparency = 0}):Play()
+wait(0.2)
+game:GetService("TweenService"):Create(TextLabel_2,TweenInfo.new(0.25),{TextTransparency = 0}):Play()
+wait(0.2)
+game:GetService("TweenService"):Create(Label,TweenInfo.new(0.25),{TextTransparency = 0}):Play()
+wait(0.2)
 
 
-Load.MouseButton1Down:connect(function()
-wait(0.7)
-game.CoreGui:FindFirstChild("Launcher"):Destroy()
-if game.PlaceId == 10659321502 then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Sword%20War%20Steal%20Time'))()
-elseif game.PlaceId == 662417684 then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/LuckyBlocks.lua'))()
-elseif game.PlaceId == 5203883770 then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/HdAdmin.lua'))()
-elseif game.PlaceId == 9748064935 then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Arabic%20Brookhaven.lua'))()
-elseif game.PlaceId == 9848789324 then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/RagdollEngine.lua'))()
-end
+--load.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+--unload.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+
+load.MouseEnter:Connect(function()
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(50, 50, 50)}):Play()
 end)
 
-UnLoad.MouseButton1Down:connect(function()
-wait(0.7)
-game.CoreGui:FindFirstChild("Launcher"):Destroy()
+load.MouseLeave:Connect(function()
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+end)
+
+unload.MouseEnter:Connect(function()
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(50, 50, 50)}):Play()
+end)
+
+unload.MouseLeave:Connect(function()
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+end)
+
+load.MouseButton1Click:Connect(function()
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+    wait()
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+    wait(1)
+    game:GetService("TweenService"):Create(Label,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(ImageLabel,TweenInfo.new(0.25),{ImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(ImageLabel,TweenInfo.new(0.25),{ImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(Frame,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(gameimage,TweenInfo.new(0.25),{ImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(ScrollingFrame,TweenInfo.new(0.25),{ScrollBarImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(TextLabel,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(TextLabel_2,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(Main,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(0.2)
+    if game.PlaceId == 10659321502 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Sword%20War%20Steal%20Time'))()
+    elseif game.PlaceId == 662417684 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/LuckyBlocks.lua'))()
+    elseif game.PlaceId == 5203883770 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/HdAdmin.lua'))()
+    elseif game.PlaceId == 9748064935 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/Arabic%20Brookhaven.lua'))()
+    elseif game.PlaceId == 9848789324 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Abdullah16661/C0cAiNe/main/RagdollEngine.lua'))()
+    end
+end)
+
+unload.MouseButton1Click:Connect(function()
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+    wait()
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{BackgroundColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+    wait(1)
+    game:GetService("TweenService"):Create(Label,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(ImageLabel,TweenInfo.new(0.25),{ImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(ImageLabel,TweenInfo.new(0.25),{ImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(Frame,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    game:GetService("TweenService"):Create(load,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    game:GetService("TweenService"):Create(unload,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(gameimage,TweenInfo.new(0.25),{ImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(ScrollingFrame,TweenInfo.new(0.25),{ScrollBarImageTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(TextLabel,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(TextLabel_2,TweenInfo.new(0.25),{TextTransparency = 2}):Play()
+    wait(0.2)
+    game:GetService("TweenService"):Create(Main,TweenInfo.new(0.25),{BackgroundTransparency = 2}):Play()
+    wait(1)
+    game.CoreGui:FindFirstChild("lan"):Destroy()
 end)
