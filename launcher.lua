@@ -14,29 +14,17 @@ if game.PlaceId == 10659321502 then
 	}
     ]]
 elseif game.PlaceId == 9848789324 then
-	getgenv().UpdateName = "v2 رقم تحديث"
+	getgenv().UpdateName = "v3 رقم تحديث"
 	getgenv().MapName = "Ragdoll Engine"
 	getgenv().MapImage = "http://www.roblox.com/asset/?id=13874938186"
 	getgenv().UpdateText = [[
-RagdollEngine = {
-    [Ragdoll] = {
-        1 - Fix Fling All
-        2 - Add [المدافع تخريب + الاغلام حقل تفجير[
-	3 - Add Admin Script 
-	4 - Fix Anti Fling
-    }
+    --تحديث جديد للسكربت--
 
-    [Target] = {
-        1 - Whitelist System
-        2 - New Benx
-    }
-
-    [Telepor] = {
-        1 - Tween Mode
-    }
-}
-
-	و الكثير..
+    1 - اثنين رقم رانك اضافة
+    2 - الفليق تغير تم
+    3 - السكربت بعض مشاكل حل تم
+    4 - البريموم مشاكل حل تم
+    5 - القائمة شكل تغير تم
 ]]
 elseif game.PlaceId == 9748064935 then
 	getgenv().UpdateName = "v0.1"
